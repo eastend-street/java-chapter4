@@ -1,26 +1,29 @@
-import java.util.Scanner;
 
 public class Max {
 	public static int max(int num1, int num2) {
-		int result = 0;
-
 		if (num1 > num2) {
-			result = num1;
+			return num1;
 		} else {
-			result = num2;
+			return num2;
 		}
+	}
 
-		return result;
+	public static double max(double num1, double num2) {
+		if (num1 > num2) {
+			return num1;
+		} else {
+			return num2;
+		}
+	}
+
+	public static double max(double num1, double num2, double num3) {
+		return max(max(num1, num2), num3);
 	}
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		System.out.println("Max number is " + max(3, 4));
+		System.out.println("Max number is " + max(3.0, 5.4));
+		System.out.println("Max number is " + max(3.0, 5.4, 10.14));
 
-		System.out.println("Enter number 1: ");
-		int number1 = input.nextInt();
-
-		System.out.println("Enter number 2: ");
-		int number2 = input.nextInt();
-		System.out.println("Max number is " + max(number1, number2));
 	}
 }
