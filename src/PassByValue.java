@@ -9,6 +9,6 @@ public class PassByValue {
 		int x = 1;
 		System.out.println("Before the call, x is " + x);
 		increment(x);
-		System.out.println("After the call, x is " + x);
+		System.out.println("the call, x is " + x);
 	}
 }
